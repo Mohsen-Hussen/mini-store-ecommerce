@@ -1,12 +1,17 @@
 import React from "react";
-import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
+import CardItem from "./components/Card/CardItem";
 import NavBar from "./components/NavBar/NavBar";
 
 const App = () => {
 	return (
-		<div className="App">
+		<>
 			<NavBar />
-		</div>
+			<Container className="App">
+				<CardItem />
+			</Container>
+		</>
 	);
 };
 

@@ -1,10 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import navStyle from "./navStyle.css";
+import "./navStyle.css";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { BiStore } from "react-icons/bi";
 import { BsCart2 } from "react-icons/bs";
-import colors from "../../config/colors";
+import CurrencyList from "../CurrencyList/CurrencyList";
 
 const NavBar = () => {
 	return (
@@ -28,18 +28,10 @@ const NavBar = () => {
 							</Nav.Link>
 						</Nav>
 						<Nav className="ml-auto">
-							<NavDropdown title="Currency" id="basic-nav-dropdown">
-								<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.2">
-									Another action
-								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.3">
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action/3.4">
-									Separated link
-								</NavDropdown.Item>
+							<NavDropdown title="$" id="basic-nav-dropdown">
+									<CurrencyList />
+								{/* <NavDropdown.Item href="#action/3.1">
+								</NavDropdown.Item> */}
 							</NavDropdown>
 							<Nav.Link href="#cart" className="fontCustAnother">
 								<BsCart2 className="cartIcon" />
